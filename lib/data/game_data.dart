@@ -76,7 +76,7 @@ final Map<String, List<String>> gameData = {
   ],
 
   // --- CINE Y TELEVISIÓN ---
-  'Cine y Televisión': [
+  'Cine y Television': [
     'Cámara',
     'Director',
     'Actor',
