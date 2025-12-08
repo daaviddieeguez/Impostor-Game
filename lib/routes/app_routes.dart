@@ -5,12 +5,11 @@ import 'package:flutter/material.dart';
 class AppRoutes {
   static const initialRoute = 'home';
 
-  // Aquí definimos solo las opciones que queremos que salgan en el menú
   static final MenuOptions = <MenuOption>[
     // 1. Opción para configurar jugadores
     MenuOption(
       route: 'jugadores',
-      icon: Icons.group_outlined, // Icono de grupo
+      icon: Icons.group_outlined,
       name: 'Configurar Jugadores',
       screen: const JugadoresScreen(),
     ),

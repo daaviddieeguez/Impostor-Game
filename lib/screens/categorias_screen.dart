@@ -1,5 +1,4 @@
 import 'dart:math';
-// 1. IMPORTAMOS EL TEMA
 import 'package:fl_impostor/theme/app_theme.dart'; 
 import 'package:fl_impostor/data/game_data.dart';
 import 'package:fl_impostor/data/game_state.dart';
@@ -18,24 +17,24 @@ class CategoriasScreen extends StatefulWidget {
 class _CategoriasScreenState extends State<CategoriasScreen> {
   
   final List<Map<String, String>> _categorias = [
-    {'img': 'assets/AnimalesNaturaleza.png', 'name': 'Animales', 'key': 'Animales y Naturaleza'},
-    {'img': 'assets/ComidaBebida.png', 'name': 'Comida', 'key': 'Comida y Bebida'},
+    {'img': 'assets/AnimalesNaturaleza.png', 'name': 'Animales y naturaleza', 'key': 'Animales y Naturaleza'},
+    {'img': 'assets/ComidaBebida.png', 'name': 'Comida y bebida', 'key': 'Comida y Bebida'},
     {'img': 'assets/VidaCotidiana.png', 'name': 'Vida Cotidiana', 'key': 'Vida Cotidiana'},
     {'img': 'assets/Navidad.png', 'name': 'Navidad', 'key': 'Misterio Navideño'},
-    {'img': 'assets/CineTelevision.png', 'name': 'Cine y TV', 'key': 'Cine y Televisión'},
-    {'img': 'assets/CuerpoSalud.png', 'name': 'Salud', 'key': 'Cuerpo y Salud'},
+    {'img': 'assets/CineTelevision.png', 'name': 'Cine y Televisión', 'key': 'Cine y Television'},
+    {'img': 'assets/CuerpoSalud.png', 'name': 'Cuerpo y Salud', 'key': 'Cuerpo y Salud'},
     {'img': 'assets/Deportes.png', 'name': 'Deportes', 'key': 'Deportes'},
     {'img': 'assets/Escuela.png', 'name': 'Escuela', 'key': 'Escuela'},
     {'img': 'assets/Fantasia.png', 'name': 'Fantasía', 'key': 'Fantasia'},
-    {'img': 'assets/GenteFamosa.png', 'name': 'Famosos', 'key': 'Gente Famosa'},
+    {'img': 'assets/GenteFamosa.png', 'name': 'Gente Famosa', 'key': 'Gente Famosa'},
     {'img': 'assets/VidaCotidiana.png', 'name': 'Juegos', 'key': 'Juegos'}, 
     {'img': 'assets/Marcas.png', 'name': 'Marcas', 'key': 'Marcas'},
-    {'img': 'assets/ModaRopa.png', 'name': 'Moda', 'key': 'Moda y Ropa'},
-    {'img': 'assets/MundoLugares.png', 'name': 'Lugares', 'key': 'Mundo y Lugares'},
+    {'img': 'assets/ModaRopa.png', 'name': 'Moda y Ropa', 'key': 'Moda y Ropa'},
+    {'img': 'assets/MundoLugares.png', 'name': 'Mundo y Lugares', 'key': 'Mundo y Lugares'},
     {'img': 'assets/Musica.png', 'name': 'Música', 'key': 'Musica'},
     {'img': 'assets/Personajes.png', 'name': 'Personajes', 'key': 'Personajes'},
     {'img': 'assets/Tecnologia.png', 'name': 'Tecnología', 'key': 'Tecnologia'},
-    {'img': 'assets/TrabajoOficios.png', 'name': 'Trabajos', 'key': 'Trabajos y Oficios'},
+    {'img': 'assets/TrabajoOficios.png', 'name': 'Trabajos y Oficios', 'key': 'Trabajos y Oficios'},
     {'img': 'assets/Verano.png', 'name': 'Verano', 'key': 'Verano'},
     {'img': 'assets/Transporte.png', 'name': 'Transportes', 'key': 'Transportes'},
   ];
@@ -114,7 +113,7 @@ class _CategoriasScreenState extends State<CategoriasScreen> {
           if (_seleccionadas.isNotEmpty)
             IconButton(
               icon: const Icon(Icons.delete_sweep),
-              color: AppTheme.white, // Aseguramos que el icono sea blanco
+              color: AppTheme.white,
               onPressed: () => setState(() => _seleccionadas.clear()),
             )
         ],

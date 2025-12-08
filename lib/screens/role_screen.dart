@@ -1,10 +1,7 @@
-// Archivo: lib/screens/roles_screen.dart
-
 import 'package:fl_impostor/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_impostor/data/players_data.dart';
 import 'package:fl_impostor/data/game_state.dart';
-// Asume que esta pantalla se llama después de getRandomGame()
 
 class RolesScreen extends StatefulWidget {
   const RolesScreen({super.key});
@@ -123,7 +120,7 @@ class _RolesScreenState extends State<RolesScreen> {
             // 5. Botón para finalizar (visible solo en el último jugador)
             if (haVistoRol && isLastPlayer)
               ElevatedButton(
-                onPressed: finishGame, // Llamamos a la función de salir
+                onPressed: finishGame,
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 child: const Text(
                   'SALIR A LA PANTALLA DE INICIO',
