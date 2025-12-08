@@ -1,5 +1,5 @@
 import 'package:fl_impostor/data/players_data.dart';
-import 'package:fl_impostor/theme/app_theme.dart'; // Importamos el tema
+import 'package:fl_impostor/theme/app_theme.dart';
 import 'package:fl_impostor/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
