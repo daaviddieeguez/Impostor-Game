@@ -129,7 +129,7 @@ class _CategoriasScreenState extends State<CategoriasScreen> {
         : null,
         
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -152,6 +152,7 @@ class _CategoriasScreenState extends State<CategoriasScreen> {
               ),
             );
           },
+          padding: const EdgeInsets.only(top: 10, bottom: 100),
         ),
       ),
     );

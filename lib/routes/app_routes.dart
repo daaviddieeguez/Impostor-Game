@@ -13,7 +13,7 @@ class AppRoutes {
       name: 'Configurar Jugadores',
       screen: const JugadoresScreen(),
     ),
-    
+
     // 2. Opción para Jugar (Lleva a la pantalla de Categorías)
     MenuOption(
       route: 'categorias',
@@ -21,17 +21,26 @@ class AppRoutes {
       name: 'Jugar',
       screen: const CategoriasScreen(),
     ),
+
+    // 3. Opción para aprender a jugar
+    MenuOption(
+      route: 'ayuda',
+      icon: Icons.help,
+      name: '¿Cómo jugar?',
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
-    
+
     // Añadimos la ruta 'home' manualmente para que la app sepa dónde empezar,
     // pero NO la añadimos a la lista MenuOptions para que no salga el botón.
     appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
 
     for (final option in MenuOptions) {
-      appRoutes.addAll({option.route: (BuildContext context) => option.screen});
+      if (option.route != 'ayuda') { 
+        appRoutes.addAll({option.route: (BuildContext context) => option.screen!});
+      }
     }
 
     return appRoutes;

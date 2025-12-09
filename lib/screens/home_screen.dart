@@ -1,4 +1,5 @@
 import 'package:fl_impostor/routes/app_routes.dart';
+import 'package:fl_impostor/widgets/help_dialog.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -53,7 +54,11 @@ class HomeScreen extends StatelessWidget {
                       style: const TextStyle(fontSize: 20)
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, item.route);
+                      if (item.route == 'ayuda') {
+                        showHelpDialog(context);
+                      } else {
+                        Navigator.pushNamed(context, item.route);
+                      }
                     },
                   ),
                 ),

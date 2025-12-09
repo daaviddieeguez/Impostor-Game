@@ -71,10 +71,12 @@ class _JugadoresScreenState extends State<JugadoresScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
     return Scaffold(
-      backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text('Configurar Equipo'),
+        title: const Text('Configurar Jugadores'),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -95,10 +97,12 @@ class _JugadoresScreenState extends State<JugadoresScreen> {
           Container(
             padding: const EdgeInsets.all(15),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: theme.colorScheme.surface,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: isDark
+                      ? Colors.transparent
+                      : Colors.black.withAlpha(13),
                   offset: const Offset(0, 5),
                   blurRadius: 10,
                 ),
@@ -189,10 +193,10 @@ class _PlayerCard extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: ListTile(
         leading: CircleAvatar(
-          backgroundColor: AppTheme.primary, 
+          backgroundColor: AppTheme.primary,
           foregroundColor: Colors.white,
           child: Text(
-            name.isNotEmpty ? name[0].toUpperCase() : '?', 
+            name.isNotEmpty ? name[0].toUpperCase() : '?',
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
@@ -212,24 +216,30 @@ class _PlayerCard extends StatelessWidget {
 class _EmptyState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    final Color iconColor = isDark ? Colors.grey[700]! : Colors.grey[300]!;
+    final Color textColor = isDark ? Colors.grey[500]! : Colors.grey[500]!;
+    final Color hintColor = isDark ? Colors.grey[700]! : Colors.grey[400]!;
+
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.groups_3_outlined, size: 100, color: Colors.grey[300]),
+          Icon(Icons.groups_3_outlined, size: 100, color: iconColor),
           const SizedBox(height: 20),
           Text(
             'No hay jugadores todavía',
             style: TextStyle(
               fontSize: 18,
-              color: Colors.grey[500],
+              color: textColor,
               fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 5),
           Text(
             '¡Añade a tus amigos arriba!',
-            style: TextStyle(fontSize: 14, color: Colors.grey[400]),
+            style: TextStyle(fontSize: 14, color: hintColor),
           ),
         ],
       ),
