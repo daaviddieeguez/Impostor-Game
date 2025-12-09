@@ -9,7 +9,6 @@ class AlertScreen extends StatelessWidget {
       context: context,
       builder: (context) {
         return AlertDialog(
-          // Añadimos bordes redondeados
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),

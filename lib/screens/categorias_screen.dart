@@ -1,5 +1,4 @@
 import 'dart:math';
-// 1. IMPORTAMOS EL TEMA
 import 'package:fl_impostor/theme/app_theme.dart'; 
 import 'package:fl_impostor/data/game_data.dart';
 import 'package:fl_impostor/data/game_state.dart';
@@ -114,7 +113,7 @@ class _CategoriasScreenState extends State<CategoriasScreen> {
           if (_seleccionadas.isNotEmpty)
             IconButton(
               icon: const Icon(Icons.delete_sweep),
-              color: AppTheme.white, // Aseguramos que el icono sea blanco
+              color: AppTheme.white,
               onPressed: () => setState(() => _seleccionadas.clear()),
             )
         ],

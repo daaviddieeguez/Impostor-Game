@@ -32,7 +32,6 @@ class CustomTextFormField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       autofocus: true,
-      //initialValue: 'Da',
       textCapitalization: TextCapitalization.words,
       keyboardType: keyboardType,
       obscureText: obscureText,
@@ -47,7 +46,6 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         labelText: labelText,
         helperText: helperText,
-        //prefixIcon: Icon (Icons.verified_user_outlined),
         icon: Icon(icon),
         suffixIcon: Icon(suffixIcon),
       ),

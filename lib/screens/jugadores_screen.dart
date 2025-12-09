@@ -123,7 +123,7 @@ class _JugadoresScreenState extends State<JugadoresScreen> {
                   ElevatedButton.icon(
                     onPressed: _addPlayer,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppTheme.action, // Verde (Acción)
+                      backgroundColor: AppTheme.action,
                       padding: const EdgeInsets.symmetric(
                         vertical: 12,
                         horizontal: 20,
@@ -151,7 +151,7 @@ class _JugadoresScreenState extends State<JugadoresScreen> {
 
           Expanded(
             child: currentPlayers.isEmpty
-                ? _EmptyState() // Si está vacía mostramos dibujo
+                ? _EmptyState()
                 : ListView.builder(
                     padding: const EdgeInsets.only(
                       top: 20,
@@ -189,10 +189,10 @@ class _PlayerCard extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: ListTile(
         leading: CircleAvatar(
-          backgroundColor: AppTheme.primary, // Rojo
+          backgroundColor: AppTheme.primary, 
           foregroundColor: Colors.white,
           child: Text(
-            name.isNotEmpty ? name[0].toUpperCase() : '?', // Primera letra
+            name.isNotEmpty ? name[0].toUpperCase() : '?', 
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
